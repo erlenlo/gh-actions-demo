@@ -6,7 +6,7 @@ const HomePage: React.FC<{}> = () => {
     series: [
       {
         name: 'Råning',
-        data: [12, 42, 24, 32, 76, 104, 55],
+        data: [12, 42, 24, 32, 76, 104, 57],
       },
     ],
     options: {
