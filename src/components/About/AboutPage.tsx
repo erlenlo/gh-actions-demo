@@ -6,16 +6,16 @@ const AboutPage: React.FC<{}> = () => {
       <h2 className="mb-4">About</h2>
 
       <p>
-        In nec rutrum mi. Curabitur quis risus dui. Aenean eleifend pulvinar
-        vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-        mollis vestibulum tellus, non facilisis risus egestas a. Maecenas
-        blandit nulla quis interdum elementum. Duis ullamcorper tempus orci, non
-        dignissim lectus viverra vel. Suspendisse molestie, odio non ultricies
-        maximus, risus quam congue orci, ut congue nulla ante ut erat. Ut vitae
-        iaculis tortor, sodales facilisis nunc. Suspendisse mattis feugiat lacus
-        id fringilla. Aenean vehicula tincidunt diam, vitae tincidunt massa
-        maximus eget. Sed erat turpis, efficitur sit amet lorem ut, fermentum
-        eleifend orci.
+        Pellentesque ut massa purus. Duis varius tellus nec tortor lobortis
+        faucibus. Curabitur sollicitudin sit amet erat suscipit cursus.
+        Suspendisse interdum arcu vel tellus auctor, elementum tincidunt erat
+        pretium. Nunc lectus urna, dignissim et varius a, blandit non arcu. Nunc
+        dignissim odio aliquam, scelerisque turpis eu, aliquam lorem. Phasellus
+        porta viverra congue. Phasellus tellus diam, tristique eget tristique
+        ac, volutpat at ipsum. Maecenas rhoncus id lectus id placerat. Nunc et
+        commodo diam. Nam nec dolor metus. Praesent quis aliquam ante. Donec
+        lobortis tellus in purus porta, et interdum odio ultricies. Maecenas sit
+        amet nisl sed tortor congue egestas quis ac nunc.
       </p>
       <p>
         Morbi tincidunt nisi eu nisl faucibus, ut consequat leo congue. Praesent
