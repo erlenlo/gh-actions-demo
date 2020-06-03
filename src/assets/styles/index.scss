@@ -1,0 +1,66 @@
+@import './margins.scss';
+@import './padding.scss';
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  color: rgb(50, 55, 50);
+}
+
+body {
+  --em-green: #6d9c99;
+  --em-green-rgb: 109, 156, 153;
+  --em-green-dark: #38898c;
+  --em-green-darkest: #2b656a;
+
+  --em-yellow: #f0de81;
+  --em-orange: #feb933;
+  --em-orange-rgb: 254, 185, 51;
+  --em-red: #fc4445;
+
+  --em-white: #fdfdfd;
+
+  --content-offset: 320px;
+
+  @media (max-width: 1920px) {
+    --content-offset: 192px;
+  }
+
+  @media (max-width: 1439px) {
+    --content-offset: 64px;
+  }
+
+  @media (max-width: 1024px) {
+    --content-offset: 32px;
+  }
+
+  @media (max-width: 480px) {
+    --content-offset: 16px;
+  }
+}
+
+.text-wrap {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.noscroll {
+  overflow-y: hidden;
+  --scroll-padding: 15px;
+}
+
+.noscroll-win {
+  --scroll-padding: 17px;
+}
+
+.noscroll-padding {
+  padding-right: var(--scroll-padding);
+}

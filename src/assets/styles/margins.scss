@@ -1,0 +1,32 @@
+$sizes: 44;
+
+@mixin margin-classes {
+  @for $i from 0 through $sizes {
+    $margin: $i * 0.25rem;
+    /* margin #{$margin} */
+    .em-m-#{$i} {
+      margin: $margin !important;
+    }
+    .em-ml-#{$i} {
+      margin-left: $margin !important;
+    }
+    .em-mr-#{$i} {
+      margin-right: $margin !important;
+    }
+    .em-mt-#{$i} {
+      margin-top: $margin !important;
+    }
+    .em-mb-#{$i} {
+      margin-bottom: $margin !important;
+    }
+    .em-mx-#{$i} {
+      margin-left: $margin !important;
+      margin-right: $margin !important;
+    }
+    .em-my-#{$i} {
+      margin-top: $margin !important;
+      margin-bottom: $margin !important;
+    }
+  }
+}
+@include margin-classes;

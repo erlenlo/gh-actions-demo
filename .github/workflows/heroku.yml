@@ -1,0 +1,60 @@
+name: Ta åsså deploy det her
+
+on:
+  push:
+    branches-ignore: ['**']
+    paths: [src/**, public/**]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Cache node modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
+            ${{ runner.OS }}-build-
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: npm install
+        run: npm install
+
+      - name: Build
+        run: npm run build:prod --if-present
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Test
+        run: npm test
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Deploy to Heroku
+        uses: akhileshns/heroku-deploy@v3.0.4
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
+          heroku_email: "erlend.lokken@gmail.com"
+          branch: "HEAD"
+          dontuseforce: false
+          usedocker: false
+          appdir: ""
+          docker_heroku_process_type: "web"

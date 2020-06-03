@@ -1,0 +1,42 @@
+name: Ta åsså bøgg det her
+
+on:
+  pull_request:
+    branches: [master]
+
+jobs:
+  build-lint-test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Cache node modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
+            ${{ runner.OS }}-build-
+            
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}    
+
+      - name: npm install
+        run: npm install
+
+      - name: Build
+        run: npm run build:prod
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Test
+        run: npm test
