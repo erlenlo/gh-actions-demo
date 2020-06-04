@@ -18,15 +18,18 @@ const AboutPage: React.FC<{}> = () => {
         amet nisl sed tortor congue egestas quis ac nunc.
       </p>
       <p>
-        Morbi tincidunt nisi eu nisl faucibus, ut consequat leo congue. Praesent
-        tempor turpis velit, vel scelerisque purus tristique non. Phasellus sed
-        neque non sem dignissim elementum. Nam aliquet arcu ante, ut auctor urna
-        imperdiet vitae. Quisque nec finibus elit. Curabitur sit amet felis
-        arcu. Nulla facilisi. Morbi nisi quam, egestas a erat cursus, suscipit
-        suscipit tortor. Proin vitae ligula ultricies, ullamcorper lacus in,
-        placerat augue. Phasellus iaculis malesuada aliquam. Ut mattis, mi sit
-        amet tincidunt hendrerit, mauris felis fermentum metus, ut condimentum
-        metus sem in risus. Nulla sit amet lorem lacus. Quisque non arcu ex.
+        Nulla a ex tincidunt, condimentum erat non, dapibus risus. Curabitur
+        lobortis, enim vel posuere commodo, leo magna sollicitudin ante, ac
+        varius dui velit vitae risus. Pellentesque lacinia sed tortor vitae
+        vulputate. Integer eleifend vehicula odio, vitae dignissim erat pharetra
+        et. Duis porttitor volutpat luctus. Nulla sodales convallis dictum. In
+        in leo eget nisi bibendum pulvinar. Morbi tempus cursus lacus, feugiat
+        pulvinar leo facilisis malesuada. Curabitur blandit, nunc eget tincidunt
+        dictum, elit nisi vulputate eros, et tempor nisl dolor mollis lacus.
+        Vivamus sit amet facilisis mauris, at tempus eros. Nulla eu eros porta,
+        laoreet risus et, euismod magna. Phasellus vitae risus varius,
+        pellentesque velit ut, congue diam. Nam sed libero mollis felis rhoncus
+        efficitur. Curabitur bibendum lacinia urna quis ultrices.
       </p>
     </section>
   );
